@@ -1,0 +1,8 @@
+{%extends 'one/base.html'%}
+{%block content%}
+<form method="post">
+{% csrf_token %}
+<div>{{form.as_p}}</div>
+<button type="submit">create</button>
+</form>
+{%endblock content%}

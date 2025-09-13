@@ -1,0 +1,12 @@
+{%extends 'one/base.html'%}
+{%block title%}список книг{%endblock%}
+    {%block content%}
+        {% for book in books %}
+        <p>
+            {{book.title}}
+            <a href="{%url 'delete' pk=book.id%}"><button type="button">delete</button></a>
+            
+        </p>
+        {% endfor %}
+    {%endblock%}
+

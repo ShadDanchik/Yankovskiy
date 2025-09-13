@@ -1,0 +1,9 @@
+{%extends 'one/base.html'%}
+{%block content%}
+
+{% for author in authors %}
+<div>
+    {{author.name}} {{author.surname}}
+</div>
+{% endfor %}
+{%endblock content%}

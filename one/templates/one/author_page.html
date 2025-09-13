@@ -1,0 +1,10 @@
+{%extends 'one/base.html'%}
+{%block content%}
+
+{{author.name}} {{author.surname}}
+{% for book in books %}
+<div>
+    {{book.title}} {{book.price}}
+</div>
+{% endfor %}
+{%endblock content%}
