@@ -22,7 +22,15 @@ class Book(models.Model):
     def __str__(self):
         return f"{self.title}"
     
-
-
+class Reader(models.Model):
+    name = models.CharField(max_length=15)
+    surname = models.CharField(max_length=15)
+    contacts = models.CharField(max_length=10)
+    activity = models.BooleanField(default=True)
     
-    
+class Reservation(models.Model):
+    reader_number = models.IntegerField()
+    reader_id = models.ForeignKey("Reader", on_delete=models.SET_NULL, null=True)
+    book_id = models.ForeignKey("Book", on_delete=models.CASCADE)
+    date = models.DateField(auto_now_add=True)
+    return_date = models.DateField(null=True, blank=True)
