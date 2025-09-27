@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}библиотека{%endblock%}</title>
-    <link type="stylesheet" href="{%static 'one/css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'one/css/style.css'%}">
+    {%block style%}{%endblock%}
 </head>
 <body>
     {%include 'one/includes/header.html'%}

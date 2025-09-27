@@ -1,9 +1,14 @@
 {%extends 'one/base.html'%}
+{%load static%}
+
+{%block style%}<link rel="stylesheet" href="{%static 'one/css/authorpage.css'%}">{%endblock%}
+
 {%block content%}
 
 {% for author in authors %}
 <div>
     {{author.name}} {{author.surname}}
 </div>
+<a href="{%url 'authorpage' id=author.id%}"><button>Подробнее</button></a>
 {% endfor %}
 {%endblock content%}

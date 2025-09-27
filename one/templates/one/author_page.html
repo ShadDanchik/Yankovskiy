@@ -1,10 +1,12 @@
 {%extends 'one/base.html'%}
 {%block content%}
 
+<img src="{{author.portrait.url}}" alt="">
 {{author.name}} {{author.surname}}
 {% for book in books %}
 <div>
     {{book.title}} {{book.price}}
 </div>
 {% endfor %}
+
 {%endblock content%}
